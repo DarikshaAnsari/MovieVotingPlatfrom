@@ -12,7 +12,18 @@ export default function Navbar() {
         <button><Link to="/CreatUser">SignUp</Link></button>
       </div>
       </nav>
+    <div className="header-content">
+      <h1>Vote!! For your favorite movies </h1>
+      <h3>Just a Click and get access</h3>
+      <p>Want to know rating?click on the search bar</p>
+      <form className="search">
+        <input type="text"  placeholder="Search"/>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
       </div>
+
       </>
   );
 }
