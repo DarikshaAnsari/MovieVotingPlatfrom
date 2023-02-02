@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 
 export default function SignUp() {
+  let navigate=useNavigate();
   const [credentials, setcredentials] = useState({
     name: "",
     email: "",
@@ -29,6 +30,9 @@ export default function SignUp() {
     if (!json.success) {
       console.log(json.success)
       alert("Enter valid Credentials");
+    }
+    if(json.success){
+      navigate("/");
     }
   };
   const onChange = (event) => {
