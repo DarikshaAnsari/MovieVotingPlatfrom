@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
 export default function SignUp() {
- /* const [credentials, setcredentials] = useState({
+/*const [credentials, setcredentials] = useState({
     name: "",
     email: "",
     password: "",
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3000/api/createuser", {
+    const response = await fetch("http://localhost:4000/api/createuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +38,7 @@ export default function SignUp() {
     <div className="loginPage">
     <div className="form-box">
       <h1>SignUp</h1>
-      <form  /*onSubmit={handleSubmit}*/>
+      <form /* onSubmit={handleSubmit}*/>
        <div className="input-group">
        <div className="input-field">
           <input type="text" placeholder="Name" /*value={credentials.name}
