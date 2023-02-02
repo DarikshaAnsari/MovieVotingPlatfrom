@@ -3,6 +3,7 @@ import Home from "./Screens/Home";
 import Login from "./Screens/Login";
 import SignUp from "./Screens/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Contest from "./Screens/Contest";
 export default function App() {
   return (
     <Router>
@@ -11,6 +12,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Creatuser" element={<SignUp />} />
+          <Route exact path="/contest" element={<Contest />} />
         </Routes>
       </div>
     </Router>
