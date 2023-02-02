@@ -8,9 +8,9 @@ export default function Navbar() {
      navigate("/");
   }
   const handleSignUp=()=>{
-    localStorage.removeItem("authToken");
+    if(!localStorage.getItem("authToken")){
     navigate("/Creatuser");
-  }
+}}
   return (
     <>
     <div className="header">
