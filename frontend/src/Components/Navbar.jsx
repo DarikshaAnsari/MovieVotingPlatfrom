@@ -1,24 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
-    <section id="header">
-      <div className="navbar">
-        <ul>
-          <li>Home</li>
-          <li>
-            <Link className="btn bg-white text-success mx-1" to="/Login">
-              Login
-            </Link>
-          </li>
-          <li>
-            {" "}
-            <Link className="btn bg-white text-success mx-1" to="/CreatUser">
-              SignUp
-            </Link>
-          </li>
-        </ul>
+    <>
+    <div className="header">
+    <nav>
+      <img src="logo.png" className="background" alt="" />
+      <div>
+        <button><Link to="/Login"> Login</Link></button> 
+        <button><Link to="/CreatUser">SignUp</Link></button>
       </div>
-    </section>
+      </nav>
+    <div className="header-content">
+      <h1>Vote!! For your favorite movies </h1>
+      <h3>Just a Click and get access</h3>
+      <p>Want to know rating?click on the search bar</p>
+      <form className="search">
+        <input type="text"  placeholder="Search"/>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+      </div>
+
+      </>
   );
 }
