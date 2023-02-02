@@ -7,6 +7,10 @@ export default function Navbar() {
     localStorage.removeItem("authToken");
      navigate("/");
   }
+  const handleSignUp=()=>{
+    localStorage.removeItem("authToken");
+    navigate("/Creatuser");
+  }
   return (
     <>
     <div className="header">
@@ -32,7 +36,7 @@ export default function Navbar() {
       <p>Want to know rating?click on the search bar</p>
       <form className="search">
         <input type="text"  placeholder="Search"/>
-        <button type="submit">Search</button>
+        <button type="submit" onClick={handleSignUp}>Search</button>
       </form>
     </div>
 
