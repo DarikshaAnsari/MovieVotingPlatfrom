@@ -1,13 +1,11 @@
 require('dotenv').config()
 const mongoose=require("mongoose");
+mongoose.set("strictQuery",false)
 
 
 const mongoDB=async()=>{
-    await mongoose.connect(process.env.MONGOURI,{useNewUrlParser:true},async(err,res)=>{
-        if(err) console.log(err);
-        else {
-            console.log("connected");
-        }
-});
+    return  mongoose.connect(process.env.MONGOURI,{
+        useNewUrlParser:true,
+})
 }
 module.exports=mongoDB;
