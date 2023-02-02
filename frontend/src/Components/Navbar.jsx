@@ -19,7 +19,8 @@ export default function Navbar() {
         <button className="button"><Link to="/CreatUser">SignUp</Link></button>
       </div>:
       <div>
-        <button className="button"><Link to="/">Liked 🤍</Link></button> 
+
+        <button className="button"><Link to="/liked">Liked 🤍</Link></button> 
         <div className="button" onClick={handleLogout}>logout</div>
       </div>
       }
