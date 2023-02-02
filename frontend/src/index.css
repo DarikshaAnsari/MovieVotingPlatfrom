@@ -29,18 +29,23 @@ nav {
   justify-content: space-between;
   padding: 10px 0;
 }
-
-nav button {
+nav div{
+  display:  flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.button {
   border: 0;
   outline: 0;
   background: #db0001;
   color: #fff;
-  padding: 7px 20px;
-  font-size: 12px;
-  border-radius: 4px;
-  margin-left: 10px;
+  padding: 10px 25px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-left: 20px;
   cursor: pointer;
 }
+
 
 .header-content {
   position: absolute;

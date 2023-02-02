@@ -1,16 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from 'react-router-dom'
 
 export default function Navbar() {
+  const navigate=useNavigate();
+  const handleLogout=()=>{
+    localStorage.removeItem("authToken");
+     navigate("/");
+  }
   return (
     <>
     <div className="header">
     <nav>
       <img src="logo.png" className="background" alt="" />
+      {
+      (!localStorage.getItem("authToken"))? 
       <div>
-        <button><Link to="/Login"> Login</Link></button> 
-        <button><Link to="/CreatUser">SignUp</Link></button>
+        <button className="button"><Link to="/Login"> Login</Link></button> 
+        <button className="button"><Link to="/CreatUser">SignUp</Link></button>
+      </div>:
+      <div>
+        <button className="button"><Link to="/">Liked 🤍</Link></button> 
+        <div className="button" onClick={handleLogout}>logout</div>
       </div>
+      }
+     
       </nav>
     <div className="header-content">
       <h1>Vote!! For your favorite movies </h1>
