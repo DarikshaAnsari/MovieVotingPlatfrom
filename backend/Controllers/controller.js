@@ -20,7 +20,16 @@ const createUser = async (req, res) => {
             name: req.body.name,
             password: secPassword,
             email: req.body.email,
-          }).then(res.status(200).json({success:true}));
+          })
+          let email = req.body.email;
+          let userData = await user.findOne({email});
+          const data={
+            user:{
+              id:userData.id
+            }
+          }
+          const authToken=jwt.sign(data,jwtSecret)
+          return res.json({ success: true, authToken:authToken});
         } catch (error) {
           console.log(error);
           res.status(400).json({ success: false });
