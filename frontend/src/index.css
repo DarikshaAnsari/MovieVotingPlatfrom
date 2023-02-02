@@ -29,11 +29,13 @@ nav {
   justify-content: space-between;
   padding: 10px 0;
 }
-nav div{
-  display:  flex;
+
+nav div {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .button {
   border: 0;
   outline: 0;
