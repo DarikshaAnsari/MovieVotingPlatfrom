@@ -20,7 +20,7 @@ const createUser = async (req, res) => {
             name: req.body.name,
             password: secPassword,
             email: req.body.email,
-          }).then(res.status(200).json({sucess:true}));
+          }).then(res.status(200).json({success:true}));
         } catch (error) {
           console.log(error);
           res.status(400).json({ success: false });
