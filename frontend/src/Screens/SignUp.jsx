@@ -25,13 +25,14 @@ export default function SignUp() {
       }),
     });
     const json = await response.json();
-    console.log(json);
-
-    if (!json.success) {
-      console.log(json.success)
+    //console.log(json);
+    if(json.exist){
+      alert("This email already exist")
+    }
+    else if (!json.success) {
       alert("Enter valid Credentials");
     }
-    if(json.success){
+    else if(json.success){
       localStorage.setItem("userName",credentials.name);
       localStorage.setItem("userEmail",credentials.email);
       localStorage.setItem("authToken",json.authToken);
