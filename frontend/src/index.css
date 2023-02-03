@@ -46,7 +46,7 @@ nav {
 }
 
 
-.buttonown {
+.button {
   border: 0;
   outline: 0;
   background: #db0001;
@@ -57,10 +57,8 @@ nav {
   margin-left: 20px;
   cursor: pointer;
 }
-.buttonown a {
-  color: #fff;
-  text-decoration: none;
-}
+
+
 .header-content {
   position: absolute;
   top: 50%;
