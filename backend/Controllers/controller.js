@@ -47,7 +47,7 @@ const loginUser= async (req, res) => {
     }  
     let email = req.body.email;
     try {
-      let userData = await user.findOne({email});
+      let userData = await user.findOne({email:email});
       if (!userData) {
         return res.status(400).json({ error: "Try loging with correct credentials" });
       }
@@ -61,8 +61,9 @@ const loginUser= async (req, res) => {
           id:userData.id
         }
       }
+      const userName=userData.name;
       const authToken=jwt.sign(data,jwtSecret)
-      return res.json({ success: true, authToken:authToken});
+      return res.json({ success: true, authToken:authToken,userName:userName});
     } catch (error) {
       console.log(error);
       res.json({ success: false });
