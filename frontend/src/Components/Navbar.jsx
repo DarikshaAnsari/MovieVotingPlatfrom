@@ -18,14 +18,15 @@ export default function Navbar() {
       <img src="logo.png" className="background" alt="" />
       {
       (!localStorage.getItem("authToken"))? 
-      <div>
+      <div className="nav-div">
         <button className="button"><Link to="/Login"> Login</Link></button> 
         <button className="button"><Link to="/CreatUser">SignUp</Link></button>
       </div>:
-      <div>
-
+      <div className="nav-div">
         <button className="button"><Link to="/liked">Liked 🤍</Link></button> 
         <div className="button" onClick={handleLogout}>logout</div>
+        <div><i class="fa-solid fa-user fa-2xl img-icon"></i></div>
+        <div><i class="fa-solid fa-caret-down icon-dropdown"></i></div>
       </div>
       }
      

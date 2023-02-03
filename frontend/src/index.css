@@ -30,13 +30,23 @@ nav {
   padding: 10px 0;
 }
 
-nav div {
+.nav-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+.img-icon{
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+.icon-dropdown{
+  margin-left: 5px;
+  margin-bottom:5px ;
 }
 
-.button {
+
+.buttonown {
   border: 0;
   outline: 0;
   background: #db0001;
@@ -47,8 +57,10 @@ nav div {
   margin-left: 20px;
   cursor: pointer;
 }
-
-
+.buttonown a {
+  color: #fff;
+  text-decoration: none;
+}
 .header-content {
   position: absolute;
   top: 50%;
