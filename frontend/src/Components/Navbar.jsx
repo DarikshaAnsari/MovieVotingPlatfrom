@@ -44,6 +44,7 @@ document.addEventListener('mousedown',closeOpenMenu)
         <button className="button"><Link to="/CreatUser">SignUp</Link></button>
       </div>:
       <div className="nav-div">
+         <button className="button"><Link to="/contest">Contest</Link></button> 
         <button className="button"><Link to="/liked">Liked 🤍</Link></button> 
         <div className="button" onClick={handleLogout}>logout</div>
 
@@ -74,6 +75,6 @@ document.addEventListener('mousedown',closeOpenMenu)
 
       </div>
 
-      </>
-  );
+      </>
+  );
 }
