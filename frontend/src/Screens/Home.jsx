@@ -6,11 +6,20 @@ import Navbar from "../Components/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <hr></hr>
-     <Features/>
-     <Footer/>
-    </div>
+    <>
+      
+        
+    {
+      (localStorage.getItem("authToken"))?
+      <Navbar/>
+      :
+      <div>
+        <Navbar />
+        <hr></hr>
+       <Features/>
+       <Footer/>
+       </div>
+    }
+     </>
   );
 }
