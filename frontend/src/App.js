@@ -16,7 +16,7 @@ export default function App() {
           <Route exact path="/Creatuser" element={<SignUp />} />
           <Route exact path="/liked" element={<Liked />} />
           <Route exact path="/contest" element={<Contest />} />
-          <Route exact path="/loginmain" element={<Loginmain />} />
+          <Route exact path="/loginmain/:userName" element={<Loginmain />} />
         </Routes>
       </div>
     </Router>
