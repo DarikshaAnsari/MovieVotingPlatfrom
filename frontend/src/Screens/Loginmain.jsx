@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from "react";
 import { Link ,useNavigate} from 'react-router-dom'
 import {useRef} from "react"
+import Slide from '../Components/slide/Slide';
+
 
 export default function Loginmain() {
   const [dropdown,setDropdown] = useState(false)
@@ -52,7 +54,7 @@ export default function Loginmain() {
         </div>
       </div>
       </nav>
-   
+   <Slide/>
    </>
   );
 }
