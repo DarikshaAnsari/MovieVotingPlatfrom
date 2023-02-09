@@ -43,10 +43,10 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
        <div className="input-group">
          <div className="input-field">
-          <input type="email" placeholder="Email" name="email" onChange={onChange} value={credentials.email}/>
+          <input className="input" type="email" placeholder="Email" name="email" onChange={onChange} value={credentials.email}/>
          </div>
          <div className="input-field">
-          <input type="password" placeholder="Password" name="password" onChange={onChange} value={credentials.password} />
+          <input className="input" type="password" placeholder="Password" name="password" onChange={onChange} value={credentials.password} />
          </div>
          <div className="btn-field">
          <button type="submit" > Submit</button>
