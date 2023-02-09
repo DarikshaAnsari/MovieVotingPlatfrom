@@ -5,62 +5,60 @@ import { useRef } from "react"
 import { TypeAnimation } from 'react-type-animation';
 
 export default function Navbar() {
-  const [dropdown, setDropdown] = useState(false)
-  const navigate = useNavigate();
-  const menu = useRef(null)
+  //const [dropdown, setDropdown] = useState(false)
+  //const navigate = useNavigate();
+  //const menu = useRef(null)
 
-  const closeOpenMenu = (e) => {
-    if (menu.current && dropdown && !menu.current.contains(e.target)) {
-      setDropdown(false)
-    }
-  }
+  //const closeOpenMenu = (e) => {
+    //if (menu.current && dropdown && !menu.current.contains(e.target)) {
+      //setDropdown(false)
+    //}
+  //}
 
-  const showDropdown = () => {
-    setDropdown(!dropdown)
-  }
+  //const showDropdown = () => {
+    //setDropdown(!dropdown)
+  //}
 
-  const handleLogout = () => {
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("authToken");
-    navigate("/");
-  }
-  const [search, setSearch] = useState("lion");
+  //const handleLogout = () => {
+    //localStorage.removeItem("userEmail");
+    //localStorage.removeItem("userName");
+    //localStorage.removeItem("authToken");
+    //navigate("/");
+  //}
+  //const [search, setSearch] = useState("lion");
 
-  const fetchApi = async () => {
+  //const fetchApi = async () => {
     //console.log(search);
     //setMovie(search);
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=7a1d86e6f18b89565a23b46b3e502198&query=${search}`;
-    const response = await fetch(url);
-    const json = await response.json();
-    console.log(json);
-  }
-  const handleSignUp = async (e) => {
-    e.preventDefault();
-    if (!localStorage.getItem("authToken")) {
-      navigate("/Creatuser");
-    }
-    else {
+    //const url = `https://api.themoviedb.org/3/search/movie?api_key=7a1d86e6f18b89565a23b46b3e502198&query=${search}`;
+    //const response = await fetch(url);
+    //const json = await response.json();
+    //console.log(json);
+  //}
+  //const handleSignUp = async (e) => {
+    //e.preventDefault();
+    //if (!localStorage.getItem("authToken")) {
+      //navigate("/Creatuser");
+    //}
+    //else {
 
       //console.log("here");
-      await fetchApi();
-    }
+      //await fetchApi();
+    //}
 
-  }
-  document.addEventListener('mousedown', closeOpenMenu)
+  //}
+  //document.addEventListener('mousedown', closeOpenMenu)
 
   return (
     <>
       <div className="header">
         <nav>
           <img src="logo.png" className="background" alt="" />
-          {
-            (!localStorage.getItem("authToken")) ?
               <div className="nav-div">
                 <button className="button"><Link to="/Login"> Login</Link></button>
                 <button className="button"><Link to="/CreatUser">SignUp</Link></button>
-              </div> :
-              <div className="nav-div">
+              </div> 
+              {/* <div className="nav-div">
                 <button className="button"><Link to="/contest">Contest</Link></button>
                 <button className="button"><Link to="/liked">Liked 🤍</Link></button>
                 
@@ -78,7 +76,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-          }
+   */}
 
         </nav>
         <div className="header-content">

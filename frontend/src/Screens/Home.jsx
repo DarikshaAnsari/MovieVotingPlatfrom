@@ -8,22 +8,10 @@ import Navbar from "../Components/Navbar";
 export default function Home() {
   return (
     <>
-      
-        
-    {
-      (localStorage.getItem("authToken"))?
-     <div>
-      <Navbar/>
-     </div>
-
-      :
-      <div>
-        <Navbar />
-        <hr></hr>
-       <Features/>
-       <Footer/>
-       </div>
-    }
+      <Navbar />
+      <hr></hr>
+      <Features/>
+      <Footer/>
      </>
   );
 }

@@ -27,7 +27,7 @@ export default function Login() {
       localStorage.setItem("userEmail",credentials.email);
       localStorage.setItem("authToken",json.authToken);
       //console.log(localStorage.getItem("authToken"))
-      navigate("/");
+      navigate("/loginmain");
     }
   };
   const onChange = (event) => {
@@ -47,7 +47,7 @@ export default function Login() {
           <input type="password" placeholder="Password" name="password" onChange={onChange} value={credentials.password} />
          </div>
          <div className="btn-field">
-         <button type="submit" > <Link to="/loginmain" >Submit</Link></button>
+         <button type="submit" > Submit</button>
        <button> <Link to="/CreatUser" > I'm a new user</Link></button> 
        </div>
 
