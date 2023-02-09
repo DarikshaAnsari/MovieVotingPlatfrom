@@ -36,8 +36,8 @@ export default function SignUp() {
       localStorage.setItem("userName",credentials.name);
       localStorage.setItem("userEmail",credentials.email);
       localStorage.setItem("authToken",json.authToken);
-      console.log(localStorage.getItem("authToken"))
-      navigate("/");
+      const userName=localStorage.getItem("userName")
+      navigate(`/loginmain/${userName}`);
     }
   };
   const onChange = (event) => {

@@ -30,14 +30,12 @@ export default function Loginmain() {
 
   return (
    <>
-   <nav>
+   <nav className="p-0 m-0">
       <img src="logo.png" className="background" alt="" />
       
       <div className="nav-div">
          <button className="button"><Link to="/contest">Contest</Link></button> 
         <button className="button"><Link to="/liked">Liked 🤍</Link></button> 
-        <div className="button" onClick={handleLogout}>logout</div>
-
         <div ref={menu} className="flex flex-col relative">
         <div className="flex flex-row hover:cursor-pointer" onClick={showDropdown}>
         <div><i className="fa-solid fa-user fa-2xl img-icon"></i></div>
@@ -46,7 +44,7 @@ export default function Loginmain() {
         <div className={`glassmorphism px-4 py-2 ${dropdown ? 'visible' : 'invisible'} absolute -right-8 top-10`}>
           <div className="text-xl font-bold">{localStorage.getItem("userName")}</div>
           <div>{localStorage.getItem("userEmail")}</div>
-         
+          <div  className="bg-secondary rounded-[5px] px-4 py-2 mt-4 right-0" onClick={handleLogout}>logout</div>
         </div>
         </div>
       </div>
