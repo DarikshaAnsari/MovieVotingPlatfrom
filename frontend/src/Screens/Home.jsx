@@ -1,4 +1,5 @@
 import React from "react";
+
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 
@@ -11,7 +12,10 @@ export default function Home() {
         
     {
       (localStorage.getItem("authToken"))?
+     <div>
       <Navbar/>
+     </div>
+
       :
       <div>
         <Navbar />

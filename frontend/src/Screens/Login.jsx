@@ -47,7 +47,7 @@ export default function Login() {
           <input type="password" placeholder="Password" name="password" onChange={onChange} value={credentials.password} />
          </div>
          <div className="btn-field">
-         <button type="submit" > Submit</button>
+         <button type="submit" > <Link to="/loginmain" >Submit</Link></button>
        <button> <Link to="/CreatUser" > I'm a new user</Link></button> 
        </div>
 
