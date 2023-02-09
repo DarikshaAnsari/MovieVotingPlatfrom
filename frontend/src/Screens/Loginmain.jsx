@@ -2,11 +2,14 @@ import React from 'react'
 import { useState } from "react";
 import { Link ,useNavigate} from 'react-router-dom'
 import {useRef} from "react"
+import Slide from '../Components/slide/Slide';
+
 
 export default function Loginmain() {
   const [dropdown,setDropdown] = useState(false)
   const navigate=useNavigate();
   const menu = useRef(null)
+ 
 
   const closeOpenMenu = (e)=>{
     if(menu.current && dropdown && !menu.current.contains(e.target)){
@@ -49,7 +52,7 @@ export default function Loginmain() {
         </div>
       </div>
       </nav>
-   
+   <Slide/>
    </>
   );
 }
