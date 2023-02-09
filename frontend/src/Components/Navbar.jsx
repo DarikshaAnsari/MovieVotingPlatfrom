@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import { useRef } from "react"
-
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Navbar() {
   const [dropdown, setDropdown] = useState(false)
@@ -37,13 +37,13 @@ export default function Navbar() {
   }
   const handleSignUp = async (e) => {
     e.preventDefault();
-     if (!localStorage.getItem("authToken")) {
-     navigate("/Creatuser");
+    if (!localStorage.getItem("authToken")) {
+      navigate("/Creatuser");
     }
-     else {
-      
-         //console.log("here");
-         await fetchApi();
+    else {
+
+      //console.log("here");
+      await fetchApi();
     }
 
   }
@@ -63,16 +63,17 @@ export default function Navbar() {
               <div className="nav-div">
                 <button className="button"><Link to="/contest">Contest</Link></button>
                 <button className="button"><Link to="/liked">Liked 🤍</Link></button>
-                <div className="button" onClick={handleLogout}>logout</div>
+                
 
                 <div ref={menu} className="flex flex-col relative">
                   <div className="flex flex-row hover:cursor-pointer" onClick={showDropdown}>
                     <div><i class="fa-solid fa-user fa-2xl img-icon"></i></div>
                     <div><i class="fa-solid fa-caret-down icon-dropdown"></i></div>
                   </div>
-                  <div className={`glassmorphism px-4 py-2 ${dropdown ? 'visible' : 'invisible'} absolute -right-8 top-10`}>
-                    <div className="text-xl font-bold">{localStorage.getItem("userName")}</div>
+                  <div className={`flex flex-col glassmorphism px-4 py-2 ${dropdown ? 'visible' : 'invisible'} absolute -right-8 top-10`}>
+                    <div className="text-2xl font-bold">{localStorage.getItem("userName")}</div>
                     <div>{localStorage.getItem("userEmail")}</div>
+                    <button className="bg-secondary rounded-[5px] px-4 py-2 mt-4 right-0" onClick={handleLogout}>logout</button>
 
                   </div>
                 </div>
@@ -84,10 +85,29 @@ export default function Navbar() {
           <h1>Vote!! For your favorite movies </h1>
           <h3>Just a Click and get access</h3>
           <p>Want to know rating?click on the search bar</p>
-          <form className="search">
-            <input type="text" placeholder="Search" onChange={(e) => { setSearch(e.target.value) }} />
-            <button onClick={(e) => {handleSignUp(e)}}>Search</button>
-          </form>
+          <div className="search flex justify-between" >
+            {/* <input type="text" placeholder="Search" onChange={(e) => { setSearch(e.target.value) }} /> */}
+            <TypeAnimation
+              sequence={[
+                'Pathaan', 
+                1000, 
+                'Avengers: Infinity War', 
+                1000, 
+                'Inception',
+                1000,
+                'The Lord of the Rings',
+                1000,
+                'Yeh Jawaani Hai Deewani',
+                1000
+              ]}
+              wrapper="div"
+              cursor={true}
+              repeat={Infinity}
+              className="text-primary pl-4 text-3xl font-bold"
+            />
+            {/* <button onClick={(e) => { handleSignUp(e) }}>Search</button> */}
+            <button>Search</button>
+          </div>
         </div>
 
       </div>
