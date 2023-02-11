@@ -55,11 +55,11 @@ export default function SignUp() {
               onChange={onChange} />
          </div>
          <div className="input-field">
-          <input type="email" placeholder="Email"  value={credentials.email} name="email"
+          <input className="input" type="email" placeholder="Email"  value={credentials.email} name="email"
               onChange={onChange}/>
          </div>
          <div className="input-field">
-          <input type="password" placeholder="Password" value={credentials.password} name="password"
+          <input className="input" type="password" placeholder="Password" value={credentials.password} name="password"
               onChange={onChange} />
          </div>
          <div className="btn-field">
