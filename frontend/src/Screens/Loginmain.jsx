@@ -33,7 +33,7 @@ export default function Loginmain() {
 
   return (
    <>
-   <nav >
+   <nav>
       <img src="logo.png" className="background" alt="" />
       
       <div className="nav-div">

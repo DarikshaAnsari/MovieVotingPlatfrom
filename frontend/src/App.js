@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Home from "./Screens/Home";
 import Login from "./Screens/Login";
 import SignUp from "./Screens/SignUp";
@@ -11,12 +11,12 @@ export default function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />}/>
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/Creatuser" element={<SignUp />} />
           <Route exact path="/liked" element={<Liked />} />
           <Route exact path="/contest" element={<Contest />} />
-          <Route exact path="/loginmain/:userName" element={<Loginmain />} />
+          <Route exact path="/loginmain/:userName" element={<Loginmain/>}/>
         </Routes>
       </div>
     </Router>
